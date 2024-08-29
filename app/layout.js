@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "FireGPT",
-  description: "FireGPT",
+  title: "Fire Sensei",
+  description: "Fire Sensei",
 };
 
 export default function RootLayout({ children }) {

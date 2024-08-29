@@ -1,72 +1,86 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  .chat-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f5f5f5;
-  }
-  
-  .chat-messages {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .chat-message {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    max-width: 60%;
-    word-wrap: break-word;
-    white-space: pre-line; /* Ensure newlines are rendered */
-  }
-  
-  .chat-message.user {
-    align-self: flex-end;
-    background-color: #3498db;
-    color: white;
-  }
-  
-  .chat-message.ai {
-    align-self: flex-start;
-    background-color: #2ecc71;
-    color: white;
-  }
-  
-  .chat-form {
-    display: flex;
-    padding: 20px;
-    background-color: white;
-    border-top: 1px solid #ddd;
-  }
-  
-  .chat-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-  }
-  
-  .chat-button {
-    padding: 10px;
-    border: none;
-    background-color: #3498db;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .chat-button:hover {
-    background-color: #2980b9;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f8f8f8, #f4f4f4);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffaf0; /* Light cream background */
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 60%;
+  word-wrap: break-word;
+  white-space: pre-line; /* Ensure newlines are rendered */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.chat-message.user {
+  background-color: #507fff; /* Coral color */
+  color: white;
+  align-self: flex-end;
+  border-radius: 10px 10px 0 10px;
+  margin-left: auto; /* Pushes the user message to the right */
+}
+
+.chat-message.ai {
+  background-color: #ff6347; /* Tomato color */
+  color: white;
+  align-self: flex-start;
+  border-radius: 10px 10px 10px 0;
+  margin-right: auto; /* Pushes the AI message to the left */
+}
+
+
+.chat-form {
+  display: flex;
+  padding: 20px;
+  background-color: #fff; /* White background for input area */
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for form */
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background-color: #fafafa; /* Slightly gray background for input */
+}
+
+.chat-button {
+  padding: 10px;
+  border: none;
+  background-color: #ff7f50; /* Coral color */
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for button */
+}
+
+.chat-button:hover {
+  background-color: #ff6347; /* Darker tomato color on hover */
+}
